@@ -102,6 +102,9 @@ no matter which interface (other than `eth1`) you're getting Internet from.
 
 ```
 sudo lnxrouter --ap wlan0 MyAccessPoint -p MyPassPhrase
+
+EXAMPLE
+sudo lnxrouter --ap wlan0 EQPAYMINER -p Mini@123456
 ```
 
 no matter which interface you're getting Internet from (even from `wlan0`). Will create virtual Interface `x0wlan0` for hotspot.
@@ -110,7 +113,6 @@ no matter which interface you're getting Internet from (even from `wlan0`). Will
 
 Clients access Internet through only `isp5`
 
-<details></details>
 
 ```
 sudo lnxrouter -i eth1 -o isp5  --no-dns  --dhcp-dns 8.8.8.8  -6 --dhcp-dns6 [2606:4700:4700::1111]
@@ -127,7 +129,7 @@ sudo lnxrouter -i eth1 -o isp5  --no-dns  --dhcp-dns 8.8.8.8  -6 --dhcp-dns6 [26
 
 ### Create LAN without providing Internet
 
-<details></details>
+<details>
 
 ```
 sudo lnxrouter -n -i eth1
@@ -139,11 +141,11 @@ sudo lnxrouter -n --ap wlan0 EQPAYMINER -p Mini@123456
 
 > Read _Notice 1_
 
-
+</details>
 
 ### Internet for LXC
 
-<details></details>
+<details>
 
 Create a bridge
 
@@ -163,11 +165,11 @@ lxc.network.hwaddr = xx:xx:xx:xx:xx:xx
 ```
 sudo lnxrouter -i lxcbr5
 ```
-
+</details>
 
 
 ### Transparent proxy
-
+<details>
 All clients' Internet traffic go through, for example, Tor (notice this example is NOT an anonymity use)
 
 
@@ -189,10 +191,10 @@ DNSPort [fd00:5:6:7::1]:9053
 > 
 > Although we use Tor as example here, Linux-router does NOT ensure nor is NOT aiming at anonymity.
 
-
+</details>
 
 ### Clients-in-sandbox network
-
+<details>
 To not give our infomation to clients. Clients can still access Internet.
 
 
@@ -208,9 +210,10 @@ sudo lnxrouter -i eth1 \
 
 
 > Linux-router comes with no warranty. Use on your own risk
+</details>
 
 ### Use as transparent proxy for LXD
-
+<details>
 Create a bridge
 
 ```
@@ -246,9 +249,10 @@ To remove that new profile from container
 ```
 lxc profile remove <container> profile5
 ```
-
+</details>
+  
 #### To not use profile
-
+<details>
 Add new `eth0` to container overriding default `eth0`
 
 ```
@@ -261,7 +265,7 @@ To remove the customized `eth0` to restore default `eth0`
 lxc config device remove <container> eth0
 ```
 
-
+</details>
 
 ### Use as transparent proxy for VirtualBox
 
