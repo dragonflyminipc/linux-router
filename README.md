@@ -2,11 +2,6 @@
 
 Set Linux as router in one command. Able to provide Internet, or create WiFi hotspot. Support transparent proxy (redsocks). Also useful for routing VM/containers.
 
-It wraps `iptables`, `dnsmasq` etc. stuff. Use in one command, restore in one command or by `control-c` (or even by closing terminal window).
-
-[Linux-Router News & Developer Notes 📰](https://github.com/dragonflyminipc/linux-router/issues/28) | [More tools and projects 🛠️](https://dragonflyminipc.github.io) | [🍻 Buy me a coffee ❤️](https://github.com/dragonflyminipc/receiving/blob/master/receiving_methods.md)
-
-> [Read this readme in web doc reader](https://dragonflyminipc.github.io/proj-doc/linux-router/) ( also available in 中文, Español, Русский язык ... )
 
 ## Features
 
